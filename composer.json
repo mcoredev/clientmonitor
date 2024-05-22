@@ -1,0 +1,8 @@
+{
+    "name": "mcore/clientmonitor-plugin",
+    "type": "october-plugin",
+    "description": "Client side create tunnel to ServerMonitor",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
