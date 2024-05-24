@@ -5,8 +5,8 @@ use Mcore\ClientMonitor\Models\MonitorSetting;
 use Illuminate\Http\Request;
 
 
-Route::post('/monitor/client/info', function(Request $request) {
-	
+Route::post('/monitoring-api/client-info', function(Request $request) {
+
 	$responseJson = [];
 	$api_token = post('api_token');
 	$api_key = MonitorSetting::get('api_key');
@@ -42,7 +42,7 @@ Route::post('/monitor/client/info', function(Request $request) {
 });
 
 
-Route::post('/monitor/client/ping', function() {
+Route::post('/monitoring-api/client-ping', function() {
     
     $statusCode = 400;
     $api_token = post('api_token');
@@ -53,5 +53,5 @@ Route::post('/monitor/client/ping', function() {
 	    return response(['statusCode' => $statusCode, 'message' => $api_key], $statusCode);
     }
 	
-    return response(['statusCode' => $statusCode, 'message' => 'Wrong Credintals'], $statusCode);
+    return response(['statusCode' => $statusCode, 'message' => 'Wrong api key'], $statusCode);
 });

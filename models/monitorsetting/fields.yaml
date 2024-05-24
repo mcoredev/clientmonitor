@@ -2,9 +2,8 @@
 #  Form Field Definitions
 # ===================================
 
-
-fields: 
-
+fields:
     api_key:
         label: API Key
         type: text
+        comment: Enter the API key for communication with the server

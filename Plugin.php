@@ -19,7 +19,7 @@ class Plugin extends PluginBase
             'name' => 'ClientMonitor',
             'description' => 'No description provided yet...',
             'author' => 'Mcore',
-            'icon' => 'icon-leaf'
+            'icon' => 'icon-podcast'
         ];
     }
 
@@ -70,10 +70,10 @@ class Plugin extends PluginBase
     {
         return [
             'clientmonitor' => [
-                'label' => 'Client monitor setting',
-                'description' => 'Setting....',
+                'label' => 'Client monitor',
+                'description' => 'Connection to the server for status monitoring',
                 'category' => 'CATEGORY_CMS',
-                'icon' => 'octo-icon-user-group',
+                'icon' => 'icon-podcast',
                 'class' => \Mcore\ClientMonitor\Models\MonitorSetting::class,
                 'size' => 'medium',
                 'order' => -100,
